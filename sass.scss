@@ -1,0 +1,111 @@
+$font: "Overmind";
+$font2: "Chavier";
+$color1: rgb(41, 76, 105);
+$color2:  rgb(114, 146, 250);
+$color3: rgba(116, 185, 176, 0.205);
+$textShadow: 2px 2px 2px rgb(58, 138, 175);
+
+
+// fonts go here  
+@font-face {
+  font-family: "Chavier";
+  src: url("capstone2's/Images/Fonts/ChavlerExtruderightDemo-lxM9d.otf");
+}
+
+
+@font-face {
+    font-family: "Overmind";
+    src: url("capstone2's/Images/Fonts/OvermindDemons-GO10y.ttf")
+}
+
+// mixins go here
+// a mixin is a group of CSS declarations
+// the ampersand (&) is used to target the parent, and then you can target the child elements with the space followed by the element name
+
+@mixin myFirst-mixin {
+    & a {
+        text-decoration: none !important;
+        color:rgb(200, 227, 243);
+        padding-right: 5%;
+        padding-left: 5%;
+        text-shadow: 2px 2px 2px black;
+        border-radius: 7px;
+    }
+    background-color: $color1;
+    border: 3px solid green;
+    text-decoration: none !important;
+    font-family: $font;
+    font-size: 20px;
+}
+
+@mixin mySecond-mixin {
+  font-family: $font2;
+  font-size: 37px;
+  text-align: center;
+  text-shadow: $textShadow;
+  color:rgb(41, 76, 105);
+  margin-top: 1%;
+}
+
+// these mixins are used to style the links and buttons
+// transform is a CSS property that is used to transform an element in 2D or 3D space. Hover over the links and buttons to see the effect 
+@mixin animation1 {
+  transform: scale(1) rotate(0deg);
+  transition: transform 1s;
+}
+
+//This is to give the rotation effect a smooth transition
+@mixin animation2 {
+  transform: scale(2) rotate(33deg);
+  transition: transform 2s;
+}
+
+  .mixIt { 
+    @include myFirst-mixin;
+  }
+
+
+  .mixItTwo {
+    @include mySecond-mixin;
+  }
+
+
+
+  button {
+    @include myFirst-mixin;
+  &:hover {
+    color: red;
+  }
+}
+
+.active {
+    background-color: $color2;
+}
+
+p {
+  text-shadow: 2px 3px 3px rgb(102, 146, 140);
+  padding-left: 8%;
+}
+
+table {
+  background-color: $color3;
+
+}
+
+#mixin-button {
+  @include animation1;
+
+}
+
+
+#mixin-button:hover {
+  @include animation2;
+}
+
+.windows {
+  background-image: linear-gradient($color3, $color3);
+  background-size: 8% 75%;
+  opacity: 85%;
+}
+
+

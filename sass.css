@@ -1,0 +1,80 @@
+@font-face {
+  font-family: "Chavier";
+  src: url("capstone2's/Images/Fonts/ChavlerExtruderightDemo-lxM9d.otf");
+}
+@font-face {
+  font-family: "Overmind";
+  src: url("capstone2's/Images/Fonts/OvermindDemons-GO10y.ttf");
+}
+.mixIt {
+  background-color: rgb(41, 76, 105);
+  border: 3px solid green;
+  text-decoration: none !important;
+  font-family: "Overmind";
+  font-size: 20px;
+}
+.mixIt a {
+  text-decoration: none !important;
+  color: rgb(200, 227, 243);
+  padding-right: 5%;
+  padding-left: 5%;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 7px;
+}
+
+.mixItTwo {
+  font-family: "Chavier";
+  font-size: 37px;
+  text-align: center;
+  text-shadow: 2px 2px 2px rgb(58, 138, 175);
+  color: rgb(41, 76, 105);
+  margin-top: 1%;
+}
+
+button {
+  background-color: rgb(41, 76, 105);
+  border: 3px solid green;
+  text-decoration: none !important;
+  font-family: "Overmind";
+  font-size: 20px;
+}
+button a {
+  text-decoration: none !important;
+  color: rgb(200, 227, 243);
+  padding-right: 5%;
+  padding-left: 5%;
+  text-shadow: 2px 2px 2px black;
+  border-radius: 7px;
+}
+button:hover {
+  color: red;
+}
+
+.active {
+  background-color: rgb(114, 146, 250);
+}
+
+p {
+  text-shadow: 2px 3px 3px rgb(102, 146, 140);
+  padding-left: 8%;
+}
+
+table {
+  background-color: rgba(116, 185, 176, 0.205);
+}
+
+#mixin-button {
+  transform: scale(1) rotate(0deg);
+  transition: transform 1s;
+}
+
+#mixin-button:hover {
+  transform: scale(2) rotate(33deg);
+  transition: transform 2s;
+}
+
+.windows {
+  background-image: linear-gradient(rgba(116, 185, 176, 0.205), rgba(116, 185, 176, 0.205));
+  background-size: 8% 75%;
+  opacity: 85%;
+}/*# sourceMappingURL=sass.css.map */
